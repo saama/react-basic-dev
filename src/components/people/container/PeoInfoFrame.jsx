@@ -5,10 +5,10 @@ class PeoInfoFrame extends Component {
   state = {
     id: 3,
     peopleList: [
-      { id: 0, name: 'jerome', age: 28 },
-      { id: 1, name: 'baek', age: 26 },
-      { id: 2, name: 'yeob', age: 30 },
-      { id: 3, name: 'pilwon', age: 31 }
+      { id: 0, title: '안녕', contents: '리액트 공부중입니다.' },
+      { id: 1, title: '하이', contents: '재밌내요' },
+      { id: 2, title: '헬로우', contents: '유용하내요' },
+      { id: 3, title: '바이', contents: '신기하내요' }
     ]
   };
 
