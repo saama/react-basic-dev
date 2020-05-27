@@ -9,6 +9,7 @@ import OlSourceVector from "ol/source/vector";
 import OlFeature from "ol/Feature";
 import OlGeomPoint from "ol/geom/Point";
 import {defaults as defaultControls, ScaleLine} from 'ol/control';
+import {Icon, Style} from 'ol/style';
 
 
 class PublicMap extends Component {
@@ -22,6 +23,17 @@ class PublicMap extends Component {
             geometry: new OlGeomPoint([14128679.82, 4512570.74]),
             name: 'My position',
           });
+
+        let iconStyle = new Style({
+            image: new Icon({
+                anchor: [0.5, 46],
+                anchorXUnits: 'fraction',
+                anchorYUnits: 'pixels',
+                src: '../../../static/images/boy.png'
+            })
+        });
+
+        this.iconFeature.setStyle(iconStyle);
 
         this.olmap = new OlMap({
             target: null,

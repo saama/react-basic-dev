@@ -2,14 +2,17 @@
 // 액션 타입 정의
 const INCREMENT = 'counter/INCREMENT' ;
 const DECREMENT = 'counter/DECREMENT' ;
+const TEST = 'counter/TEST' ;
 
 // 액션 생성 함수 정의
 export const increment = () => ({ type: INCREMENT }) ;
 export const decrement = () => ({ type: DECREMENT }) ;
+export const testaction = () => ({ type: TEST }) ;
 
 // 초기 상태 정의
 const initialState = {
-    number: 0
+    number: 0,
+    text: 'pilwon'
 } ;
 
 // 리듀서 작성
@@ -25,6 +28,11 @@ export default function Counter(state=initialState, action) {
             return {
                 ...state,
                 number: state.number - 1,
+            } ;
+        case TEST:
+            return {
+                ...state,
+                text: state.text+"!",
             } ;
         default:
             return state ;
