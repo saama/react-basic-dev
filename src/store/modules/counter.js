@@ -1,8 +1,10 @@
 //서브 리듀서
-// 액션 타입 정의
-const INCREMENT = 'counter/INCREMENT' ;
-const DECREMENT = 'counter/DECREMENT' ;
-const TEST = 'counter/TEST' ;
+import {
+    INCREMENT,
+    DECREMENT,
+    TEST,
+    ACTIONTEST
+  } from '../actionType/actionTypes';
 
 // 액션 생성 함수 정의
 export const increment = () => ({ type: INCREMENT }) ;
@@ -12,7 +14,9 @@ export const testaction = () => ({ type: TEST }) ;
 // 초기 상태 정의
 const initialState = {
     number: 0,
-    text: 'pilwon'
+    text: 'pilwon',
+    action1: false,
+    text2: 'TEST',
 } ;
 
 // 리듀서 작성
@@ -34,6 +38,12 @@ export default function Counter(state=initialState, action) {
                 ...state,
                 text: state.text+"!",
             } ;
+        case ACTIONTEST:
+        return {
+            ...state,
+            action1: true,
+            text2: action.payload,
+        } ;
         default:
             return state ;
     }

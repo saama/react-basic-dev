@@ -7,7 +7,7 @@ export const sendmessage = () => ({ type: SENDMESSAGE }) ;
 
 // 초기 상태 정의
 const initialState = {
-    title: '개인 지도 프로젝트 입니다.',
+    title: '지도연습중...',
     url: 'http://xdworld.vworld.kr:8080/2d/Base/201512/{z}/{x}/{y}.png',
     message: ''
 } ;

@@ -52,6 +52,7 @@
     "react-dom": "^16.4.2",
     "react-draggable": "^4.4.2",
     "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
     "reactstrap": "^8.4.1",
     "redux": "^4.0.5"
   },
