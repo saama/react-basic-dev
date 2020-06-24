@@ -1,33 +1,19 @@
 import React from 'react' ;
-import { Button } from '@material-ui/core/';
-import Icon from '@material-ui/core/Icon';
-import SendIcon from '@material-ui/icons/Send';
-import { makeStyles } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 
-const useStyles = makeStyles((theme) => ({
-    button: {
-      margin: theme.spacing(1),
-    },
-  }));
-
-const MyMap = ({ title,message,sendEvt }) => {
-    const classes = useStyles();
+const Map = () => {
     return (
-    <div>
-      <div id="map" style={{ width: "50%", height: "360px" }}></div>
-      <div><span>{title}</span></div>
-      <div><span>{message}</span></div>
-        <Button
-            variant="contained"
-            color="primary"
-            className={classes.button}
-            endIcon={<SendIcon />}
-            onClick={sendEvt}
-        >
-          SEND
-      </Button>
-    </div>
+      <React.Fragment>
+      <CssBaseline />
+      <Container maxWidth="sm">
+        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '90vh' }}>
+          <div id="map" style={{ width: "100%", height: "100%" }}></div>
+        </Typography>
+      </Container>
+      </React.Fragment>
     ) ;
   } ;
   
-  export default MyMap ;
+  export default Map ;

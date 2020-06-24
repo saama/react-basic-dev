@@ -57,6 +57,7 @@ module.exports = {
       chunks: false,
       chunkModules: false,
     },
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({

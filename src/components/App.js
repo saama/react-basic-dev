@@ -1,22 +1,26 @@
-import React, { Component } from 'react';
-// import PeoInfoFrame from './people/container/PeoInfoFrame';
-// import RecipeReviewCard from './template/template2';
-// import RecipeReviewCard from './template/template2';
-// import MyMap from "./map/container/MyMapContainer";
-import CounterContainer from "./counter/container/CounterContainer";
-// import MyModal from "./modal/ModalTest";
-// import MyMap from "./map/container/MyMapContainer";
+import React from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import BottomMenuComponent from "./include/BottomMenuComponent";
 
-class App extends Component {
-  render() {
-    // return <MyModal />;
-    // return <MyMap  />;
-    return <CounterContainer />;
-    // return <RecipeReviewCard />;
-    // return <PeoInfoFrame />;
-    // return <RecipeReviewCard />;
-    // return <PublicMap />;
-  }
+import People from './people/container/PeoInfoFrame';
+import Map from './map/container/MyMapContainer';
+import Counter from './counter/container/CounterContainer';
+
+function App() {
+    return (
+        <div className = "App" >
+            <div>
+                <Router>
+                    {/* <div className="app"> */}
+                    <Route exact path="/" component={Counter} />
+                    <Route path="/people" component={People} />
+                    <Route path="/map" component={Map} />
+                    <BottomMenuComponent />
+                    {/* </div> */}
+                </Router>
+            </div>
+        </div>
+);
 }
 
 export default App;
